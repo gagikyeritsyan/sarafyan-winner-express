@@ -1,0 +1,154 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  username String
+  password String
+}
+
+model Body_image {
+  id              String @id @default(uuid())
+  background_img1 String
+}
+
+model Header_main_logo {
+  id      String @id @default(uuid())
+  url     String
+  img_url String
+}
+
+model Header_navbar {
+  id    String @id @default(uuid())
+  lang  String
+  title String
+  route String
+  url   String
+}
+
+model Header_language {
+  id    String @id @default(uuid())
+  lang  String
+  title String
+}
+
+model Home_intro {
+  id          String @id @default(uuid())
+  lang        String
+  videoUrl    String
+  mainHeading String
+  subHeading  String
+}
+
+model About_title {
+  id    String @id @default(uuid())
+  lang  String
+  title String
+}
+
+model Product {
+  id          String @id @default(uuid())
+  lang        String
+  image       String
+  btn_text    String
+  title       String
+  description String
+}
+
+model Gallery_title {
+  id       String @id @default(uuid())
+  lang     String
+  title    String
+  subTitle String
+}
+
+model Gallery_content {
+  id      String @id @default(uuid())
+  img_url String
+}
+
+model Contact_title {
+  id      String @id @default(uuid())
+  lang    String
+  title   String
+  img_url String
+}
+
+model Contact_info {
+  id     String @id @default(uuid())
+  lang   String
+  name   String
+  icons1 String
+  href1  String
+  icons2 String
+  phone1 String
+  phone2 String
+  icons3 String
+  mail1  String
+  mail2  String
+}
+
+model Footer {
+  id             String @id @default(uuid())
+  lang           String
+  background_img String
+  logo_img       String
+  title          String
+  address        String
+  email          String
+  phone1         String
+  phone2         String
+}
+
+model Winery_info {
+  id          String @id @default(uuid())
+  lang        String
+  title       String
+  description String
+}
+
+model Winery_image {
+  id               String @id @default(uuid())
+  background_image String
+  img_url1         String
+  img_url2         String
+  img_url3         String
+}
+
+model Winery_our_story {
+  id          String @id @default(uuid())
+  lang        String
+  title       String
+  description String
+}
+
+model Gallery_product {
+  id      String @id @default(uuid())
+  img_url String
+}
+
+model Contact_us {
+  id          String @id @default(uuid())
+  lang        String
+  title       String
+  span        String
+  description String
+  image       String
+}
+
+model Contact_message {
+  id                          String @id @default(uuid())
+  lang                        String
+  input_name_placeholder      String
+  input_last_name_placeholder String
+  input_email_placeholder     String
+  input_tel_placeholder       String
+  textarea_placeholder        String
+  btn_text                    String
+}

@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.list-endpoints a {
+  color: #45556C;
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: block;
+  text-decoration: none;
+  padding: 8px;
+
+  &:hover {
+    background: #E2E8F0;
+  }
+}
+
+.list-endpoints a span {
+  display: inline-block;
+  background: #45556C;
+  color: #fff;
+  width: 70px;
+  padding: 3px 0;
+  text-align: center;
+}
